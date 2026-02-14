@@ -1,5 +1,5 @@
 # ZDoom-Multiplayer-Tutorial
-A very unprofessional tutorial explaining how to use ZDoom-based sourceports like GZDoom or UZDoom to play multiplayer Doom. Naturally, this is very useful for heavily modded playthroughs with friends. Due to it's superior performance and maintenance, UZDoom is used in all the examples.
+A very unprofessional tutorial explaining how to use ZDoom-based sourceports like UZDoom or GZDoom to play multiplayer Doom. Naturally, this is very useful for heavily modded playthroughs with friends. Due to it's superior performance and maintenance, UZDoom is used in all the examples.
 
 Fortunately, to play multiplayer Doom, you don't need port forwarding, all you need is to be connected on the same LAN network via ethernet cable, Hamachi, Radmin VPN, your choice. Personally I use Tailscale, it's cross-platform and works like a charm; doesn't even reveal your real IP and works across the globe (I use it to play Doom and Sonic Robo Blast 2 from across the continent with my friend from the USA, so the networking is really good!). We must run a command to start the server and let the other player join. Fun fact, Zandronum does run these commands for you and that's how their servers function, but sadly for ZDoom-based source ports you have to do this manually. It's a mouthful, I know, but trust me, explaining how to do it is way harder than it actually is; and you'll get to play nearly any mod you could ever want with your friends once you learn this. With some patience, you'll be the cool guy of your friend group for sure with this new skill! But enough preambles. To use the command, here's what you need to do. If you use Windows, open up CMD and head to your UZDoom directory. You must use cd.. to go back a folder, and cd [foldername] to enter one. Use this to navigate to the folder that contains UZDoom.exe. However, if you're on Linux, you can use the command from any directory. Once you "are in the folder" and able to use the command, you can enter it; here's an example command and the explanation below.
 
@@ -30,17 +30,17 @@ And boom, you're playing Doom together! Remember my friend, this tutorial may ha
 
 But before I do, one last note is that you can alternatively use a .bat file on Windows or a .sh file on Linux to do this instead of a command line, but the choice is up to you. If you do want to make one of these scripts, simply write the command into your .sh/.bat file and save it; running it will run the host/join procedure and you'll be able to play in just a couple of clicks! Do know though, you must add the full file's path instead of just it's name, so a bat file file could look like this:
 
-start gzdoom -iwad "C:\Games\Doom\doom2.wad" -config "C:\Games\Doom\yourconfig.ini" -file "C:\Games\Doom\examplemod.pk3" "C:\Games\Doom\exterminationday.wad" -host 2 -skill 4 -dmflags (your choice) -dmflags2 (your choice)
+start uzdoom -iwad "C:\Games\Doom\doom2.wad" -config "C:\Games\Doom\yourconfig.ini" -file "C:\Games\Doom\examplemod.pk3" "C:\Games\Doom\exterminationday.wad" -host 2 -skill 4 -dmflags (your choice) -dmflags2 (your choice)
 
 Your friend would need to do the same thing with his own script, or you can give him one.
 
-start gzdoom -iwad "C:\Games\Doom\doom2.wad" -config "C:\Games\Doom\hisconfig.ini" -file "C:\Games\Doom\examplemod.pk3" "exterminationday.wad" -join (your ip address)
+start uzdoom -iwad "C:\Games\Doom\doom2.wad" -config "C:\Games\Doom\hisconfig.ini" -file "C:\Games\Doom\examplemod.pk3" "exterminationday.wad" -join (your ip address)
 
 But that's entirely optional, and it's only necessary if you don't want to use the command line. And also, if you use Linux, you can skip the "start" option and use Linux paths instead of the Windows ones as I showcased above.
 
 Finally, I'll explain how to save and load games... once you're loaded in, open the console and type in: "save [savename]". This will create a savefile on both PC's, make sure you're running the same mods and for everything to match before loading it. To load it, at the time of writing down your command, add the -loadgame [savename] attribute; note that both you and your friend have to do for it to work.
 
-And one final comment on my part is that you can use these commands or .bat/.sh scripts without the -host (playercount) atrribute to launch your own modded instances of Doom in singleplayer. I use it to play heavily modded mapsets without needing to use a modloader app or frustratingly drag the files into GZDoom, but those script files are super useful both for single and multiplayer.
+And one final comment on my part is that you can use these commands or .bat/.sh scripts without the -host (playercount) atrribute to launch your own modded instances of Doom in singleplayer. I use it to play heavily modded mapsets without needing to use a modloader app or frustratingly drag the files into UZDoom, but those script files are super useful both for single and multiplayer.
 
 But that's all from me, I sincerely hope you find it useful, and feel free to ask me any questions if you have any! <3
 
